@@ -9,7 +9,7 @@ var max_speed = 10
 var distance_threshold = 0.2
 
 @export 
-var negative_distance_threshold = 100
+var negative_distance_threshold = 400
 
 @export
 var rotate_duration = 0.5
@@ -48,9 +48,12 @@ func _process(delta):
 		if(current_velocity > max_speed):
 			current_velocity = max_speed
 		
-	if (attraction > 0 and self.position.distance_to(target_pos) > distance_threshold) || (attraction < 0 && self.position.distance_to(target_pos) > negative_distance_threshold):
+	if attraction > 0 and self.position.distance_to(target_pos) > distance_threshold:
 		self.position += (target_pos - self.position).normalized() * current_velocity * delta
+	elif attraction < 0 && self.position.distance_to(target_pos) < negative_distance_threshold:
+		self.position -= (target_pos - self.position).normalized() * current_velocity * delta
 	else:
+		
 		current_velocity = 0.0
 		
 func setTargetPosition(pos, attr):
