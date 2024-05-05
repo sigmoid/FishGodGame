@@ -1,6 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://b8j34awwl4ym2"]
+[gd_scene load_steps=10 format=3 uid="uid://dwhmqu2go2hc"]
 
-[ext_resource type="PackedScene" uid="uid://drydvl5or6uh5" path="res://fish.tscn" id="1_gyc5x"]
+[ext_resource type="PackedScene" uid="uid://djcxo7i7yhblv" path="res://fish.tscn" id="1_gyc5x"]
 [ext_resource type="Shader" path="res://Water.gdshader" id="1_obaqw"]
 [ext_resource type="PackedScene" uid="uid://5ssukp6ir02n" path="res://Spawner/TestSpawner.tscn" id="2_fc061"]
 [ext_resource type="PackedScene" uid="uid://djajryxt0e5on" path="res://Spawner/SpawnLocation.tscn" id="3_gb7ct"]
@@ -39,47 +39,38 @@ color = Color(3.95948e-07, 0.865538, 0.867261, 1)
 [node name="Fish" parent="." instance=ExtResource("1_gyc5x")]
 position = Vector2(172, 123)
 scale = Vector2(0.2, 0.2)
-speed = 250
 
 [node name="Fish2" parent="." instance=ExtResource("1_gyc5x")]
 position = Vector2(512, 264)
 scale = Vector2(0.2, 0.2)
-speed = 250
 
 [node name="Fish3" parent="." instance=ExtResource("1_gyc5x")]
 position = Vector2(447, 403)
 scale = Vector2(0.2, 0.2)
-speed = 250
 
 [node name="Fish4" parent="." instance=ExtResource("1_gyc5x")]
 position = Vector2(225, 319)
 scale = Vector2(0.2, 0.2)
-speed = 250
 
 [node name="Fish5" parent="." instance=ExtResource("1_gyc5x")]
 position = Vector2(210, 487)
 scale = Vector2(0.2, 0.2)
-speed = 250
 
 [node name="Fish6" parent="." instance=ExtResource("1_gyc5x")]
 position = Vector2(683, 483)
 scale = Vector2(0.2, 0.2)
-speed = 250
 
 [node name="Fish7" parent="." instance=ExtResource("1_gyc5x")]
 position = Vector2(711, 250)
 scale = Vector2(0.2, 0.2)
-speed = 250
 
 [node name="Fish8" parent="." instance=ExtResource("1_gyc5x")]
 position = Vector2(885, 196)
 scale = Vector2(0.2, 0.2)
-speed = 250
 
 [node name="Fish9" parent="." instance=ExtResource("1_gyc5x")]
 position = Vector2(776, 93)
 scale = Vector2(0.2, 0.2)
-speed = 250
 
 [node name="Spawner" parent="." node_paths=PackedStringArray("spawn_locations") instance=ExtResource("2_fc061")]
 path = "res://Item/Item.tscn"
