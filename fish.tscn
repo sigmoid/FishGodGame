@@ -1,9 +1,118 @@
-[gd_scene load_steps=6 format=3 uid="uid://drydvl5or6uh5"]
+[gd_scene load_steps=31 format=3 uid="uid://djcxo7i7yhblv"]
 
 [ext_resource type="Texture2D" uid="uid://ddmdg1sp7k3ok" path="res://Fish.png" id="1_344uh"]
 [ext_resource type="Script" path="res://Fish.gd" id="1_y2u0y"]
 [ext_resource type="Script" path="res://FishBrain.gd" id="3_e3k3h"]
+[ext_resource type="Texture2D" uid="uid://bqc1svbloyenf" path="res://Assets/Green Fish 2/Green Fish1.png" id="3_fhxhh"]
+[ext_resource type="Texture2D" uid="uid://gqiyox6csm23" path="res://Assets/Green Fish 2/Green Fish2.png" id="4_61moo"]
 [ext_resource type="Script" path="res://FishHitbox.gd" id="4_jsbrc"]
+[ext_resource type="Texture2D" uid="uid://b22vcag08wi5j" path="res://Assets/Green Fish 2/Green Fish3.png" id="5_0bgml"]
+[ext_resource type="Texture2D" uid="uid://0dpsm387rf8" path="res://Assets/Green Fish 2/Green Fish4.png" id="6_kqr4m"]
+[ext_resource type="Texture2D" uid="uid://dgf46ftwvguqe" path="res://Assets/Green Fish 2/Green Fish5.png" id="7_t7aoa"]
+[ext_resource type="Texture2D" uid="uid://cgcjw50p6jhvt" path="res://Assets/Green Fish 2/Green Fish6.png" id="8_lmfu1"]
+[ext_resource type="Texture2D" uid="uid://di1nwr6613fxg" path="res://Assets/Green Fish 2/Green Fish7.png" id="9_qf0nr"]
+[ext_resource type="Texture2D" uid="uid://c7qvqfrmnwh6f" path="res://Assets/Green Fish 2/Green Fish8.png" id="10_dapk7"]
+[ext_resource type="Texture2D" uid="uid://dirnypbonuu8v" path="res://Assets/Green Fish 2/Green Fish9.png" id="11_nxgmf"]
+[ext_resource type="Texture2D" uid="uid://c1ktf2nhq0g44" path="res://Assets/Green Fish 2/Green Fish10.png" id="12_dge0e"]
+[ext_resource type="Texture2D" uid="uid://u6x3kw2p7uq8" path="res://Assets/Green Fish 2/Green Fish11.png" id="13_ydp2h"]
+[ext_resource type="Texture2D" uid="uid://dhxq243uojdsd" path="res://Assets/Green Fish 2/Green Fish12.png" id="14_3webb"]
+[ext_resource type="Texture2D" uid="uid://bxjbc1lnuk41p" path="res://Assets/Red Fish 2/Red Fish1.png" id="15_h6wy0"]
+[ext_resource type="Texture2D" uid="uid://dqpj1neqi8kd8" path="res://Assets/Red Fish 2/Red Fish2.png" id="16_3jajb"]
+[ext_resource type="Texture2D" uid="uid://xls1eoqx3amf" path="res://Assets/Red Fish 2/Red Fish3.png" id="17_x7ffn"]
+[ext_resource type="Texture2D" uid="uid://6ol7hq2apsl8" path="res://Assets/Red Fish 2/Red Fish4.png" id="18_rg2sv"]
+[ext_resource type="Texture2D" uid="uid://dthj4rp3g0j14" path="res://Assets/Red Fish 2/Red Fish5.png" id="19_axyqw"]
+[ext_resource type="Texture2D" uid="uid://yu3kkb3fuyjw" path="res://Assets/Red Fish 2/Red Fish6.png" id="20_jvwfb"]
+[ext_resource type="Texture2D" uid="uid://bdvsyyen2m3vb" path="res://Assets/Red Fish 2/Red Fish7.png" id="21_pwopm"]
+[ext_resource type="Texture2D" uid="uid://d0aephyker413" path="res://Assets/Red Fish 2/Red Fish8.png" id="22_8p0fr"]
+[ext_resource type="Texture2D" uid="uid://b3cgdan138bqg" path="res://Assets/Red Fish 2/Red Fish9.png" id="23_l1qu4"]
+[ext_resource type="Texture2D" uid="uid://b6sybp5lasusb" path="res://Assets/Red Fish 2/Red Fish10.png" id="24_3cb0j"]
+[ext_resource type="Texture2D" uid="uid://dwahu5syn3r2g" path="res://Assets/Red Fish 2/Red Fish11.png" id="25_56j1i"]
+[ext_resource type="Texture2D" uid="uid://7unps3ju6a8o" path="res://Assets/Red Fish 2/Red Fish12.png" id="26_jaeni"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tua3y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_fhxhh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_61moo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_0bgml")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_kqr4m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_t7aoa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_lmfu1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_qf0nr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_dapk7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_nxgmf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_dge0e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_ydp2h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_3webb")
+}],
+"loop": true,
+"name": &"green",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_h6wy0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_3jajb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_x7ffn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_rg2sv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_axyqw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_jvwfb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_pwopm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_8p0fr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_l1qu4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_3cb0j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_56j1i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_jaeni")
+}],
+"loop": true,
+"name": &"red",
+"speed": 8.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_a4x62"]
 radius = 88.9444
@@ -17,12 +126,19 @@ rotate_duration = 1.0
 acceleration = 300.0
 
 [node name="TextureRect" type="TextureRect" parent="."]
+visible = false
 modulate = Color(0, 0, 0, 1)
 offset_left = -120.0
 offset_top = -130.0
 offset_right = 136.0
 offset_bottom = 126.0
 texture = ExtResource("1_344uh")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(-3, 3)
+sprite_frames = SubResource("SpriteFrames_tua3y")
+animation = &"red"
+frame_progress = 0.813703
 
 [node name="FishBrain" type="Node" parent="."]
 script = ExtResource("3_e3k3h")

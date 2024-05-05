@@ -13,7 +13,6 @@ var negative_distance_threshold = 400
 
 @export
 var rotate_duration = 0.5
-@onready var fish_brain = $FishBrain
 
 var target_pos = self.position
 
@@ -28,14 +27,22 @@ var current_velocity = 0.0
 @export
 var acceleration = 10.0
 
+@onready
+var animation:= $AnimatedSprite2D
+
 var attraction = 0.0
 
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
-
+	randomize()
+	var number = randi_range(0, 1)
+	if number == 0:
+		animation.animation = "green"
+	else:
+		animation.animation = "red"
+	animation.play()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -69,10 +76,6 @@ func setTargetPosition(pos, attr):
 	
 	prev_rotation = self.rotation
 	rotate_timer = rotate_duration
-	
-	fish_brain.timer = fish_brain.resetDuration
-	
-	
 	
 func ease(x):
 	return 1 - pow(1 - x, 3)
