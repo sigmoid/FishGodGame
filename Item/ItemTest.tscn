@@ -1,6 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://cbfc0vfqtnove"]
+[gd_scene load_steps=4 format=3 uid="uid://cbfc0vfqtnove"]
 
 [ext_resource type="Script" path="res://Item/ItemTest.gd" id="1_bn6h6"]
+[ext_resource type="PackedScene" uid="uid://djajryxt0e5on" path="res://Spawner/SpawnLocation.tscn" id="2_3ae5f"]
+[ext_resource type="PackedScene" uid="uid://5ssukp6ir02n" path="res://Spawner/TestSpawner.tscn" id="2_jj6ps"]
 
 [node name="ItemTest" type="Node2D"]
 script = ExtResource("1_bn6h6")
+
+[node name="SpawnLocation3" parent="." instance=ExtResource("2_3ae5f")]
+
+[node name="Spawner" parent="." node_paths=PackedStringArray("spawn_locations") instance=ExtResource("2_jj6ps")]
+path = "res://Item/Item.tscn"
+spawn_locations = [NodePath("../SpawnLocation3")]

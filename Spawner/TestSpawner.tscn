@@ -14,7 +14,7 @@ size = Vector2(311, 255.5)
 [node name="Spawner" type="Node" node_paths=PackedStringArray("spawn_locations", "parent")]
 script = ExtResource("1_4k3pw")
 path = "res://TestItem.tscn"
-spawn_locations = [NodePath(""), NodePath("")]
+spawn_locations = [null, null]
 parent = NodePath(".")
 
 [node name="SpawnLocation" type="Area2D" parent="."]

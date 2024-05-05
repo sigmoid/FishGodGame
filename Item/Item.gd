@@ -12,6 +12,7 @@ const COLORS:Array[Color] = [Color.FLORAL_WHITE,
 Color.GREEN,Color.SKY_BLUE,Color.PURPLE,Color.GOLDENROD]
 
 @export var collision_shape_2d:CollisionShape2D
+var attach_target:Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
