@@ -40,7 +40,7 @@ func _on_area_entered(area):
 	if area is item:
 		if area.tier == tier:
 			if name > area.name:
-				tier = (tier + 1) % 5
+				tier = (tier + 1) % COLORS.size()
 			else:
 				queue_free()
 	else:

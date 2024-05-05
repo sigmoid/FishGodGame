@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://drydvl5or6uh5"]
+
+[ext_resource type="Texture2D" uid="uid://ddmdg1sp7k3ok" path="res://Fish.png" id="1_344uh"]
+[ext_resource type="Script" path="res://Fish.gd" id="1_y2u0y"]
+[ext_resource type="Script" path="res://FishBrain.gd" id="3_e3k3h"]
+[ext_resource type="Script" path="res://FishHitbox.gd" id="4_jsbrc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_a4x62"]
+radius = 88.9444
+
+[node name="Fish" type="Node2D"]
+scale = Vector2(0.3, 0.3)
+script = ExtResource("1_y2u0y")
+speed = 1000
+distance_threshold = 10.0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0, 0, 0, 1)
+offset_left = -120.0
+offset_top = -130.0
+offset_right = 136.0
+offset_bottom = 126.0
+texture = ExtResource("1_344uh")
+
+[node name="FishBrain" type="Node" parent="."]
+script = ExtResource("3_e3k3h")
+maxDist = 300.0
+target_max = Vector2(1100, 640)
+random_time_offset = 0.5
+resetDuration = 0.5
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("4_jsbrc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_a4x62")
