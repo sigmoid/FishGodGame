@@ -1,7 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://b8j34awwl4ym2"]
+[gd_scene load_steps=13 format=3 uid="uid://b8j34awwl4ym2"]
 
+[ext_resource type="AudioStream" uid="uid://bcaq8g8mcbv4w" path="res://Assets/Fishy Business Theme.wav" id="1_dnhdm"]
 [ext_resource type="PackedScene" uid="uid://djcxo7i7yhblv" path="res://fish.tscn" id="1_gyc5x"]
 [ext_resource type="Shader" path="res://Water.gdshader" id="1_obaqw"]
+[ext_resource type="Script" path="res://Theme.gd" id="2_cs5s2"]
 [ext_resource type="PackedScene" uid="uid://5ssukp6ir02n" path="res://Spawner/TestSpawner.tscn" id="2_fc061"]
 [ext_resource type="PackedScene" uid="uid://djajryxt0e5on" path="res://Spawner/SpawnLocation.tscn" id="3_gb7ct"]
 [ext_resource type="PackedScene" uid="uid://b40564qidyl7e" path="res://Magnet/MagnetSpawner.tscn" id="5_3s6md"]
@@ -28,6 +30,11 @@ shader_parameter/noiseH = SubResource("NoiseTexture2D_sssqt")
 
 [node name="FishTestScene" type="Node2D"]
 position = Vector2(1, 0)
+
+[node name="Theme" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_dnhdm")
+volume_db = -4.216
+script = ExtResource("2_cs5s2")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = -2000
