@@ -1,6 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://dwhmqu2go2hc"]
+[gd_scene load_steps=4 format=3 uid="uid://b8j34awwl4ym2"]
 
-[ext_resource type="PackedScene" uid="uid://djcxo7i7yhblv" path="res://fish.tscn" id="1_gyc5x"]
+[ext_resource type="PackedScene" uid="uid://drydvl5or6uh5" path="res://fish.tscn" id="1_gyc5x"]
 [ext_resource type="PackedScene" uid="uid://5ssukp6ir02n" path="res://Spawner/TestSpawner.tscn" id="2_fc061"]
 [ext_resource type="PackedScene" uid="uid://djajryxt0e5on" path="res://Spawner/SpawnLocation.tscn" id="3_gb7ct"]
 

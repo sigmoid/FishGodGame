@@ -25,8 +25,14 @@ func _draw():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	position += velocity
+	
 	if attach_target:
-		velocity -= (position - attach_target.position).normalized()
+		var diff = (position - attach_target.position)
+		velocity -= diff.normalized()
+		if diff.length() > 50:
+			attach_target = null
+	else:
+		velocity *= 0.9
 	pass
 
 
