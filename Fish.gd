@@ -13,6 +13,7 @@ var negative_distance_threshold = 400
 
 @export
 var rotate_duration = 0.5
+@onready var fish_brain = $FishBrain
 
 var target_pos = self.position
 
@@ -68,6 +69,10 @@ func setTargetPosition(pos, attr):
 	
 	prev_rotation = self.rotation
 	rotate_timer = rotate_duration
+	
+	fish_brain.timer = fish_brain.resetDuration
+	
+	
 	
 func ease(x):
 	return 1 - pow(1 - x, 3)
