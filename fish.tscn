@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://drydvl5or6uh5"]
+[gd_scene load_steps=6 format=3 uid="uid://djcxo7i7yhblv"]
 
 [ext_resource type="Texture2D" uid="uid://ddmdg1sp7k3ok" path="res://Fish.png" id="1_344uh"]
 [ext_resource type="Script" path="res://Fish.gd" id="1_y2u0y"]
@@ -25,6 +25,7 @@ texture = ExtResource("1_344uh")
 [node name="FishBrain" type="Node" parent="."]
 script = ExtResource("3_e3k3h")
 maxDist = 300.0
+target_max = Vector2(1100, 640)
 random_time_offset = 0.5
 resetDuration = 0.5
 

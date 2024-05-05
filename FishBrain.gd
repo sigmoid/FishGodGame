@@ -8,6 +8,12 @@ var maxDist = 100.0
 var minDist = 10.0
 
 @export
+var target_min = Vector2(0,0)
+
+@export
+var target_max = Vector2(0,0)
+
+@export
 var random_time_offset = 0.2
 
 @export
@@ -28,8 +34,8 @@ func _process(delta):
 		timer = resetDuration + randf() * random_time_offset
 		
 		setNewPosition()
-		
-func setNewPosition():
+
+func generateNewPos():
 	var theta = randf_range(0, 2 * PI)
 	
 	var newPos = fish.position
@@ -37,6 +43,15 @@ func setNewPosition():
 	var dist = randf_range(1, maxDist)
 	
 	newPos += Vector2(cos(theta), sin(theta)) * dist
+	
+	return newPos
+
+func setNewPosition():
+	
+	var newPos = generateNewPos()
+	
+	while newPos.x > target_max.x || newPos.x < target_min.x || newPos.y < target_min.y || newPos.y > target_max.y:
+		newPos = generateNewPos()
 	
 	fish.setTargetPosition(newPos) 
 		
