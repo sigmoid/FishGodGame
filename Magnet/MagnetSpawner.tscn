@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://b40564qidyl7e"]
+[gd_scene load_steps=3 format=3 uid="uid://b40564qidyl7e"]
 
 [ext_resource type="Script" path="res://Magnet/MagnetSpawner.gd" id="1_2445x"]
+[ext_resource type="Texture2D" uid="uid://13gyvj2mkh2a" path="res://Assets/Plus.png" id="2_naai1"]
 
 [node name="MagnetSpawner" type="Node2D"]
 script = ExtResource("1_2445x")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1104, 47)
+texture = ExtResource("2_naai1")

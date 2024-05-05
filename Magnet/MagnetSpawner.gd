@@ -3,15 +3,23 @@ class_name Main
 
 enum Modes {ATTRACT, REPEL}
 
+@onready var sprite:= $Sprite2D
+
 var current_mode: int
 var magnet_preload: PackedScene = preload("res://Magnet/Magnet.tscn")
+var plus_texture: Texture = preload("res://Assets/Plus.png")
+var minus_texture: Texture = preload("res://Assets/Minus.png")
 
 func _ready():
 	current_mode = Modes.ATTRACT
 
 func toggle_mode():
-	current_mode = Modes.ATTRACT if current_mode == Modes.REPEL \
-			else Modes.REPEL
+	if current_mode == Modes.ATTRACT:
+		current_mode = Modes.REPEL
+		sprite.texture = minus_texture
+	else:
+		current_mode = Modes.ATTRACT
+		sprite.texture = plus_texture
 
 func spawn_magnet(pos: Vector2):
 	var attracts = true if current_mode == Modes.ATTRACT else false
