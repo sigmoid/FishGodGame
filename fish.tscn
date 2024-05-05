@@ -9,10 +9,12 @@
 radius = 88.9444
 
 [node name="Fish" type="Node2D"]
-scale = Vector2(0.3, 0.3)
+scale = Vector2(0.1, 0.1)
 script = ExtResource("1_y2u0y")
-speed = 1000
+max_speed = 250
 distance_threshold = 10.0
+rotate_duration = 1.0
+acceleration = 300.0
 
 [node name="TextureRect" type="TextureRect" parent="."]
 modulate = Color(0, 0, 0, 1)
