@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7ywx74ws32jv"]
+
+[ext_resource type="Script" path="res://Magnet/Magnet.gd" id="1_m7sll"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_n4n8n"]
+radius = 200.0
+
+[node name="Attractor" type="Area2D"]
+visible = false
+script = ExtResource("1_m7sll")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_n4n8n")

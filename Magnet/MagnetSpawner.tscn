@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b40564qidyl7e"]
+
+[ext_resource type="Script" path="res://Magnet/MagnetSpawner.gd" id="1_2445x"]
+
+[node name="MagnetSpawner" type="Node2D"]
+script = ExtResource("1_2445x")

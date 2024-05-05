@@ -53,7 +53,7 @@ func setNewPosition():
 	while newPos.x > target_max.x || newPos.x < target_min.x || newPos.y < target_min.y || newPos.y > target_max.y:
 		newPos = generateNewPos()
 	
-	fish.setTargetPosition(newPos) 
+	fish.setTargetPosition(newPos, 1.0) 
 		
 	
 		
