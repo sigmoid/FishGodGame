@@ -16,6 +16,8 @@ script = ExtResource("1_4k3pw")
 path = "res://TestItem.tscn"
 spawn_locations = [null, null]
 parent = NodePath(".")
+maxBatchSize = 3
+maxInterval = 6.0
 
 [node name="SpawnLocation" type="Area2D" parent="."]
 position = Vector2(852, 379)
@@ -32,3 +34,8 @@ script = ExtResource("2_3refa")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SpawnLocation2"]
 position = Vector2(167.5, 74.25)
 shape = SubResource("RectangleShape2D_j6efi")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
