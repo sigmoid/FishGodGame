@@ -14,7 +14,7 @@ Color.GREEN,Color.SKY_BLUE,Color.PURPLE,Color.GOLDENROD]
 @export var collision_shape_2d:CollisionShape2D
 var attach_target:Node2D
 var velocity:Vector2 = Vector2.ZERO
-
+var fishScene = preload("res://fish.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -40,7 +40,14 @@ func _on_area_entered(area):
 	if area is item:
 		if area.tier == tier:
 			if name > area.name:
-				tier = (tier + 1) % COLORS.size()
+				if tier < COLORS.size()-1:
+					tier = (tier + 1)
+					force_update_transform()
+				else:
+					var newFish = fishScene.instantiate()
+					add_sibling(newFish)
+					newFish.position = position
+					queue_free()
 			else:
 				queue_free()
 	else:
