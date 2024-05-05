@@ -8,7 +8,7 @@ var tier:int = 0:
 		queue_redraw()
 	get:
 		return tier
-const COLORS:Array[Color] = [Color.FLORAL_WHITE,
+@export var COLORS:Array[Color] = [Color.FLORAL_WHITE,
 Color.GREEN,Color.SKY_BLUE,Color.PURPLE,Color.GOLDENROD]
 
 @export var collision_shape_2d:CollisionShape2D
