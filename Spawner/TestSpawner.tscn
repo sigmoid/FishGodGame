@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://5ssukp6ir02n"]
+
+[ext_resource type="Script" path="res://Spawner/Spawner.gd" id="1_4k3pw"]
+[ext_resource type="Script" path="res://Spawner/SpawnLocation.gd" id="2_3refa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ykiwp"]
+resource_local_to_scene = true
+size = Vector2(142, 169)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j6efi"]
+resource_local_to_scene = true
+size = Vector2(311, 255.5)
+
+[node name="Spawner" type="Node" node_paths=PackedStringArray("spawn_locations", "parent")]
+script = ExtResource("1_4k3pw")
+path = "res://TestItem.tscn"
+spawn_locations = [NodePath(""), NodePath("")]
+parent = NodePath(".")
+
+[node name="SpawnLocation" type="Area2D" parent="."]
+position = Vector2(852, 379)
+script = ExtResource("2_3refa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpawnLocation"]
+position = Vector2(38, 31)
+shape = SubResource("RectangleShape2D_ykiwp")
+
+[node name="SpawnLocation2" type="Area2D" parent="."]
+position = Vector2(286, 182)
+script = ExtResource("2_3refa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpawnLocation2"]
+position = Vector2(167.5, 74.25)
+shape = SubResource("RectangleShape2D_j6efi")
