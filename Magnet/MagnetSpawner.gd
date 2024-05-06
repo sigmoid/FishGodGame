@@ -7,6 +7,7 @@ enum Modes {ATTRACT, REPEL}
 
 var current_mode: int
 var magnet_preload: PackedScene = preload("res://Magnet/Magnet.tscn")
+var indicator_preload: PackedScene = preload("res://Magnet/Indicator.tscn")
 var plus_texture: Texture = preload("res://Assets/Plus.png")
 var minus_texture: Texture = preload("res://Assets/Minus.png")
 
@@ -26,6 +27,10 @@ func spawn_magnet(pos: Vector2):
 	var magnet = magnet_preload.instantiate()
 	magnet.init(attracts, pos)
 	add_child(magnet)
+	var indicator = indicator_preload.instantiate()
+	indicator.init(pos)
+	add_child(indicator)
+	
 
 func _input(event):
 	if event is InputEventMouseButton:
